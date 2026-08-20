@@ -1,0 +1,9 @@
+[Unit]
+Description=Report backup health to monitoring platform
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/backup-health
+User=root
